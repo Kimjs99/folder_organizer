@@ -1,0 +1,4 @@
+click
+rich
+pyyaml
+customtkinter>=5.2.2

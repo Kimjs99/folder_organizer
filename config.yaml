@@ -1,0 +1,58 @@
+# 정리함 루트 경로
+root: ~/Documents/정리함
+
+# 아카이브 기준 연도 (이 연도 미만은 _Archive로)
+archive_before: 2024
+
+# 주제별 분류 규칙 (위에서 아래로 우선순위 적용)
+rules:
+  - name: 01_학교업무/생기부·세특
+    keywords: [세특, 생기부, 학교생활기록, 행동특성, 종합의견]
+    extensions: [.docx, .hwp, .hwpx, .pdf]
+
+  - name: 01_학교업무/행정·공문
+    keywords: [공문, 협조, 시행, 알림, 가정통신문, 계획서]
+    extensions: [.docx, .hwp, .hwpx, .pdf, .xlsx]
+
+  - name: 01_학교업무/체육·대회
+    keywords: [체육, 대회, 경기, 선수, 종목, 결과]
+    extensions: [.docx, .xlsx, .pdf]
+
+  - name: 01_학교업무/PLC·연수
+    keywords: [PLC, 학습공동체, 연수, 직무, 자율장학]
+    extensions: []
+
+  - name: 02_개발·IT/웹개발_프로젝트
+    keywords: [react, next, vite, astro, tailwind, component]
+    extensions: [.jsx, .tsx, .js, .ts, .html, .css]
+
+  - name: 02_개발·IT/AI·에듀테크
+    keywords: [gemini, claude, openai, llm, ai, gpt, 세특생성, edtech]
+    extensions: [.py, .ipynb, .js, .json]
+
+  - name: 02_개발·IT/스크립트·자동화
+    keywords: [script, automation, apps-script, macro, 자동화]
+    extensions: [.py, .sh, .gs, .bat, .applescript]
+
+  - name: 03_교육자료/수업자료·PPT
+    keywords: [수업, 강의, 교안, 지도안, 학습지]
+    extensions: [.pptx, .ppt, .key, .pdf]
+
+  - name: 04_참고자료/논문·보고서
+    keywords: [논문, 연구, report, paper, 보고서]
+    extensions: [.pdf]
+
+  - name: 04_참고자료/이미지·영상
+    keywords: []
+    extensions: [.jpg, .jpeg, .png, .gif, .webp, .mp4, .mov, .avi]
+
+  - name: 05_개인/재정·투자
+    keywords: [비트코인, bitcoin, 코인, 주식, 투자, 영수증, 계좌]
+    extensions: [.xlsx, .pdf, .csv]
+
+  - name: 05_개인/사진·추억
+    keywords: [여행, 가족, 사진, photo]
+    extensions: [.jpg, .jpeg, .heic, .png, .raw]
+
+# 분류되지 않은 파일의 기본 목적지
+default_destination: 04_참고자료/다운로드_정리
