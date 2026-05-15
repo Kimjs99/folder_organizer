@@ -11,7 +11,7 @@ import json
 
 from organizer.version import __version__
 
-GITHUB_REPO = "kimpro/folder-organizer"  # 실제 레포로 교체 필요
+GITHUB_REPO = "Kimjs99/folder_organizer"
 API_URL = f"https://api.github.com/repos/{GITHUB_REPO}/releases/latest"
 
 
