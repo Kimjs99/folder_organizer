@@ -240,9 +240,17 @@ class OrganizerGUI(ctk.CTk):
 
 if __name__ == "__main__":
     if getattr(sys, 'frozen', False) and len(sys.argv) > 1 and sys.argv[1] == "--cli":
-        import organizer
+        import importlib.util
+        # sys._MEIPASS 는 PyInstaller 가 data 파일을 추출하는 임시 디렉터리.
+        # 'organizer' 패키지(organizer/)와 이름이 같은 organizer.py 를
+        # `import organizer` 하면 패키지가 우선 로드되어 AttributeError 가 발생하므로
+        # 파일 경로로 직접 로드한다.
+        _organizer_py = Path(sys._MEIPASS) / "organizer.py"
+        _spec = importlib.util.spec_from_file_location("organizer_main", str(_organizer_py))
+        _mod = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_mod)
         sys.argv.pop(1)  # Remove '--cli'
-        organizer.cli.main(args=sys.argv[1:], prog_name="폴더정리_자동화")
+        _mod.cli.main(args=sys.argv[1:], prog_name="폴더정리_자동화")
         sys.exit(0)
         
     app = OrganizerGUI()
